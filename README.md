@@ -24,13 +24,13 @@ An automated installation script is included to help set up these configurations
    git clone [https://github.com/Matmik1001/Termdom.git](https://github.com/Matmik1001/Termdom.git)
    cd Termdom
 
-    Make the installer executable and run it:
+ 2. Make the installer executable and run it:
     Bash
 
-    chmod +x install.zsh
-    ./install.zsh
+         chmod +x install.zsh
+         ./install.zsh
 
-🛠️ Tech Stack
+ Tech Stack
 
     OS: Linux (Ubuntu/Debian and other linux distros)
 
