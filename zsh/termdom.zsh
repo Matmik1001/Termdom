@@ -108,7 +108,7 @@ _termdom_fetch() {
 #  SECTION 4 — Master Greeting (Typewriter Effect)
 # ══════════════════════════════════════════════════════════════════
 _termdom_greet() {
-    local msg="  Welcome master Mathews, here I am to do the work that you want me to. For you I devote."
+    local msg="  Welcome master Mathews(you can change this), here I am to do the work that you want me to. For you I devote."
     local delay=0.025
     echo ""
     echo -ne "\033[1;36m"
