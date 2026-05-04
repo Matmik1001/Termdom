@@ -1,0 +1,99 @@
+// ══════════════════════════════════════════════════════════════════
+//  TERMDOM — Niri Config Additions
+//  File: ~/.config/niri/config.kdl  (merge into your existing config)
+//
+//  Adds:
+//    • WezTerm spawn at startup
+//    • Keybindings for all Termdom scripts
+//    • Window rules for project layouts
+// ══════════════════════════════════════════════════════════════════
+
+// ── Startup ───────────────────────────────────────────────────────
+spawn-at-startup "wezterm"
+
+// Optionally start swww wallpaper daemon at login
+spawn-at-startup "swww-daemon"
+
+// ══════════════════════════════════════════════════════════════════
+//  KEYBINDINGS  (merge into your existing binds { } block)
+// ══════════════════════════════════════════════════════════════════
+binds {
+
+    // ── Termdom Workflow Scripts ───────────────────────────────
+    // Project Picker — Super+P
+    // NOTE: spawn takes a flat argument list; the shell -c command must be ONE string
+    Mod+P { spawn "wezterm" "start" "--" "zsh" "-c" "source ~/.zshrc; ~/.config/termdom/scripts/picker.zsh; exec zsh"; }
+
+    // Theme Toggle — Super+Shift+T (toggles mocha <-> latte + wallpaper)
+    Mod+Shift+T { spawn "zsh" "-c" "~/.config/termdom/scripts/theme-toggle.zsh"; }
+
+    // Lazy SQL — Super+Shift+D (database UI in Neovim)
+    Mod+Shift+D { spawn "wezterm" "start" "--" "zsh" "-c" "nvim -c 'DBUI'; exec zsh"; }
+
+    // Changelog log entry — Super+Shift+L
+    Mod+Shift+L { spawn "wezterm" "start" "--" "zsh" "-c" "~/.config/termdom/scripts/clog.zsh; exec zsh"; }
+
+    // ── Niri Window Sizing Shortcuts ──────────────────────────
+    // Full width — systems / low-level focus mode  (Super+F)
+    Mod+F { set-column-width "100%"; }
+
+    // Web dev 70% editor width  (Super+Shift+W)
+    Mod+Shift+W { set-column-width "70%"; }
+
+    // Half split  (Super+Shift+H)
+    Mod+Shift+H { set-column-width "50%"; }
+
+    // Reset to 80% (sensible general default — "default" is not a valid value)
+    Mod+Shift+F { set-column-width "80%"; }
+
+    // ── Fast App Launches ─────────────────────────────────────
+    // New WezTerm window  (Super+Return)
+    Mod+Return { spawn "wezterm"; }
+
+    // Neovim in new WezTerm tab  (Super+Shift+E)
+    Mod+Shift+E { spawn "wezterm" "start" "--" "nvim"; }
+
+    // ── Screenshot (if not already bound) ─────────────────────
+    Print { screenshot; }
+    Shift+Print { screenshot-window; }
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  WINDOW RULES  (merge into your existing window-rules)
+// ══════════════════════════════════════════════════════════════════
+window-rule {
+    // WezTerm: allow transparency
+    match app-id="org.wezfurlong.wezterm"
+    opacity 0.93
+}
+
+window-rule {
+    // Firefox / Chromium — always 100% width (don't disturb with splits)
+    match app-id="firefox"
+    match app-id="chromium"
+    default-column-width { proportion 1.0; }
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  ANIMATIONS  (smooth and modern — merge into animations { })
+// ══════════════════════════════════════════════════════════════════
+animations {
+    slowdown 1.0
+
+    // Window open/close
+    window-open-start-scale 0.90
+    window-open-duration-ms 200
+    window-close-duration-ms 180
+
+    // Horizontal workspace switch
+    workspace-switch-spring-damping-ratio 1.0
+    workspace-switch-spring-stiffness 400.0
+
+    // Window movement
+    window-movement-spring-damping-ratio 1.0
+    window-movement-spring-stiffness 400.0
+
+    // Column resize
+    horizontal-view-movement-spring-damping-ratio 1.0
+    horizontal-view-movement-spring-stiffness 600.0
+}

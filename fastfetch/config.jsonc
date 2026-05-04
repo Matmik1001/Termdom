@@ -1,0 +1,235 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "/home/mathews/.config/fastfetch/assets/jedi.png",
+    "type": "iterm",
+    "width": 30,
+    "height": 15,
+    "padding": {
+      "top": 1,
+      "left": 2
+    }
+  },
+  "display": {
+    "separator": "  "
+  },
+  "modules": [
+    {
+      "type": "title",
+      "key": "",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "separator"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╭─➤  HARDWARE ⮜─────────────────────────────────────────────╮",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "custom",
+      "format": "╰─┬──────────────────────────────────────────────────────────╯",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "host",
+      "outputColor": "yellow",
+      "key": "  ├ ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "chassis",
+      "outputColor": "yellow",
+      "key": "  ├ ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "cpu",
+      "outputColor": "yellow",
+      "key": "  ├ ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "gpu",
+      "outputColor": "yellow",
+      "key": "  ├ ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "memory",
+      "outputColor": "yellow",
+      "key": "  ├ ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "swap",
+      "outputColor": "yellow",
+      "key": "  ├ ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "disk",
+      "outputColor": "yellow",
+      "key": "  ├ ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "display",
+      "key": "  ├ ",
+      "keyColor": "cyan",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "battery",
+      "key": "  ├ ",
+      "keyColor": "cyan",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "poweradapter",
+      "key": "  ├ ",
+      "keyColor": "cyan",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "custom",
+      "format": "  ╰──────────────────────────────────────────────────────────╯",
+      "outputColor": "cyan"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╭─➤  SOFTWARE ⮜─────────────────────────────────────────────╮",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "custom",
+      "format": "╰─┬──────────────────────────────────────────────────────────╯",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "os",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "kernel",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "uptime",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "shell",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "packages",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "terminal",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "wm",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "de",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "localip",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "locale",
+      "key": "  ├ ",
+      "keyColor": "yellow",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "custom",
+      "format": "  ╰──────────────────────────────────────────────────────────╯",
+      "outputColor": "yellow"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╭─➤  CUSTOMIZATION ⮜─────────────────────────────────────────╮",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "custom",
+      "format": "╰─┬───────────────────────────────────────────────────────────╯",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "theme",
+      "key": "  ├ ",
+      "keyColor": "cyan",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "icons",
+      "key": "  ├ ",
+      "keyColor": "cyan",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "wmtheme",
+      "key": "  ├ ",
+      "keyColor": "cyan",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "font",
+      "key": "  ├ ",
+      "keyColor": "cyan",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "terminalfont",
+      "key": "  ├ ",
+      "keyColor": "cyan",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "cursor",
+      "key": "  ├ ",
+      "keyColor": "cyan",
+      "outputColor": "yellow"
+    },
+    {
+      "type": "custom",
+      "format": "  ╰──────────────────────────────────────────────────────────╯",
+      "outputColor": "cyan"
+    },
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 2
+    }
+  ]
+}
