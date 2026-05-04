@@ -40,4 +40,4 @@ An automated installation script is included to help set up these configurations
 
     Shell: Zsh
 
-Maintained by That_guy
+Maintained by Mathews Mikondo
