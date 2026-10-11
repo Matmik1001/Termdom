@@ -678,5 +678,5 @@ in `tmux.conf` or this documentation.
 
 *Config   → `~/.config/tmux/tmux.conf`*
 *Docs     → `~/.config/tmux/TMUX_DOCS.md`*
-*Author   → Matthews Mikondo (Matias) · Ax-intl · CBU · Zambia*
+*Author   → Matthews Mikondo (fork) · Ax-intl · Zambia*
 *Brand    → Lord Mathews Termdom*
